@@ -1,0 +1,90 @@
+{
+  "name": "intentional-explorer-reveal",
+  "displayName": "Intentional Explorer Reveal",
+  "description": "Scroll the Explorer when you open a file, and skip that scroll when closing editors",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Tim Flaspoehler",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "intentionalExplorerReveal.closeAllEditors",
+        "title": "Close All Editors Without Explorer Reveal"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeEditorsInGroup",
+        "title": "Close Editors in Group Without Explorer Reveal"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeOtherEditors",
+        "title": "Close Other Editors Without Explorer Reveal"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeEditorsToTheRight",
+        "title": "Close Editors to the Right Without Explorer Reveal"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeActiveEditor",
+        "title": "Close Editor Without Explorer Reveal"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "intentionalExplorerReveal.closeAllEditors",
+        "key": "ctrl+m ctrl+w",
+        "mac": "ctrl+k ctrl+w"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeAllEditors",
+        "key": "ctrl+k ctrl+w",
+        "mac": "cmd+k cmd+w"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeEditorsInGroup",
+        "key": "ctrl+k w",
+        "mac": "cmd+k w"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeActiveEditor",
+        "key": "ctrl+w",
+        "mac": "cmd+w",
+        "when": "!editorTextFocus || editorTextFocus"
+      },
+      {
+        "command": "intentionalExplorerReveal.closeActiveEditor",
+        "key": "ctrl+f4",
+        "when": "!terminalFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.140.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
