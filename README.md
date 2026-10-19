@@ -8,6 +8,11 @@ This extension wraps the close-editor commands. For the duration of the close, i
 
 Leave `explorer.autoReveal` enabled. That is the default.
 
+## Install
+
+- VS Code: [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tflaspoehler.intentional-explorer-reveal)
+- Cursor and other VS Code forks: [Open VSX](https://open-vsx.org/extension/tflaspoehler/intentional-explorer-reveal)
+
 ## Shortcuts
 
 | Action | Windows / Linux | macOS |
