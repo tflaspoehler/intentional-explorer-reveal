@@ -2,7 +2,7 @@
   "name": "intentional-explorer-reveal",
   "displayName": "Intentional Explorer Reveal",
   "description": "Scroll the Explorer when you open a file, and skip that scroll when closing editors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "author": "Tim Flaspoehler",
   "publisher": "tflaspoehler",
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/tflaspoehler/intentional-explorer-reveal.git"
   },
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
